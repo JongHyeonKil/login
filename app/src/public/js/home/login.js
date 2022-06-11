@@ -6,7 +6,6 @@ const id = document.querySelector("#id"),
 
 loginBtn.addEventListener("click", login);
 
-
 function login() {
 
     const req = {
@@ -23,7 +22,7 @@ function login() {
     })
         .then((res) => res.json())
         .then((res) => {
-            if(res.success) {
+            if (res.success) {
                 location.href = "/";
             } else {
                 alert(res.msg);
