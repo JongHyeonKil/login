@@ -1,20 +1,22 @@
 "use strict";
 
 const id = document.querySelector("#id"),
+    name = document.querySelector("#name"),
     password = document.querySelector("#password"),
-    loginBtn = document.querySelector("#button");
+    confirmPsword = document.querySelector("#confirm-psword"),
+    registerBtn = document.querySelector("button");
 
-loginBtn.addEventListener("click", login);
+registerBtn.addEventListener("click", register);
 
 
-function login() {
+function register() {
 
     const req = {
         id : id.value,
         password : password.value,
     };
 
-    fetch("/login", {
+    fetch("/register", {
         method : "POST",
         headers : {
             "Content-Type" : "application/json",
